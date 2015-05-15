@@ -3,6 +3,6 @@
  */
 
 
-$(function() {
-	console.log('Hello World!');
-});
+$('.anim-trigger').click(function() {
+  $('.earth-anim').toggleClass('is-active');
+})

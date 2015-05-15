@@ -274,33 +274,93 @@ button {
 
 @-webkit-keyframes anim-test {
   0% {
-    background: #000;
+    opacity: 0;
   }
   100% {
-    background: #fff;
+    opacity: 1;
   }
 }
 @keyframes anim-test {
   0% {
-    background: #000;
+    opacity: 0;
   }
   100% {
-    background: #fff;
+    opacity: 1;
   }
 }
-html {
-  color: pink;
-  padding: 10px;
+.page-content {
+  overflow: hidden;
+  min-height: 100vh;
 }
 
-body {
-  -webkit-animation: anim-test 1s;
-  animation: anim-test 1s;
+.earth-anim {
+  position: relative;
+  max-width: 500px;
+  height: 500px;
+  margin: 100px auto 0;
+  background: #f9f9f9;
 }
-body:after {
-  content: 'Hello World!';
+
+.earth-anim__star {
   display: block;
+  width: 15px;
+  height: 15px;
+  background: red;
+  position: absolute;
+}
+.is-active .earth-anim__star {
+  background-color: yellow;
+}
+
+.earth-anim__star--1 {
+  top: 30px;
+  left: 50px;
+}
+
+.earth-anim__star--2 {
+  bottom: 200px;
+  right: 30px;
+}
+
+.earth-anim__star--3 {
+  bottom: 30px;
+  left: 140px;
+}
+
+.earth-anim__earth {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  margin-top: 50%;
+  margin-left: 50%;
+  background-color: green;
+}
+.is-active .earth-anim__earth {
+  background-color: red;
+}
+
+.anim-trigger {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "proxima-nova";
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 50px 0;
   text-align: center;
-  font-size: 70px;
-  padding: 300px 0;
+  background: #eee;
+}
+.anim-trigger:focus {
+  outline: 0;
 }

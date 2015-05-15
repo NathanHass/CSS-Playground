@@ -2,9 +2,9 @@
 
 @include keyframes(anim-test) {
   0% {
-    background: #000;
+    opacity: 0;
   }
   100%{
-    background: #fff;
+    opacity: 1;
   }
 }

@@ -1,19 +1,104 @@
 @import "base";
+@import "partials/fonts";
+@import "partials/mixins";
 @import "partials/animations";
 
-html {
-	color: pink;
-	padding: 10px;
+
+$box-size: 500px;
+$box-color: #f9f9f9;
+
+$star-size: 15px;
+$star-color: red;
+
+$earth-size: 300px;
+$earth-color: green;
+
+.page-content {
+	overflow: hidden;
+	min-height: 100vh;
+
 }
 
-body {
-	// test animation
-	@include animation(anim-test 1s);
-	&:after {
-		content:'Hello World!';
-		display: block;
-		text-align: center;
-		font-size: 70px;
-		padding: 300px 0;
+.earth-anim {
+	position: relative;
+	max-width: $box-size;
+	height: $box-size;
+	margin: 100px auto 0;
+	background: $box-color;
+}
+
+// stars
+
+.earth-anim__star {
+	display: block;
+	width: $star-size;
+	height: $star-size;
+	background: $star-color;
+	position: absolute;
+
+	.is-active & {
+		background-color: yellow;
 	}
+}
+
+.earth-anim__star--1 {
+	// position star here
+	top: 30px;
+	left: 50px;
+}
+
+.earth-anim__star--2 {
+	// position star here
+	bottom: 200px;
+	right: 30px;
+}
+
+.earth-anim__star--3 {
+	// position star here
+	bottom: 30px;
+	left: 140px;
+}
+
+// earth
+
+.earth-anim__earth {
+	display: block;
+	// declare the size
+	width: $earth-size;
+	height: $earth-size;
+
+	// absolute center this thing
+	position: absolute;
+	top: ($earth-size * -0.5);
+	left: ($earth-size * -0.5);
+	margin-top: 50%;
+	margin-left: 50%;
+
+	// lets add some style
+	background-color: $earth-color;
+	.is-active & {
+		background-color: red;
+	}
+}
+
+
+.anim-trigger {
+	@include input-default;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	// type
+	font-family: "proxima-nova";
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	// basic styles
+	padding: 50px 0;
+	text-align: center;
+	background: #eee;
+
 }
