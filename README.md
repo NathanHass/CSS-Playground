@@ -11,14 +11,8 @@ cd ~/Sites
 
 **Clone this directory**
 ```
-git clone git@github.com:NathanHass/ups-sandbox.git && cd ups-sandbox && rm -rf .git
+git clone git@github.com:NathanHass/ups-sandbox.git
 ```
-
-**If you want it to be called something other than `ups-sandbox`, you can change it like this**
-```
-mv ~/Sites/ups-sandbox3 ~/Sites/desired_directory_name
-```
-
 
 **Now it's time to build this thing out. First run a bower install**
 ```
