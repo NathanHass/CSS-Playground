@@ -17,26 +17,24 @@ $earth-color: green;
 .page-content {
 	overflow: hidden;
 	min-height: 100vh;
-
+	position: relative;
+	background: #222;
 }
 
 .earth-anim {
-	position: relative;
-	max-width: $box-size;
-	height: $box-size;
-	margin: 100px auto 0;
-	background: $box-color;
+	@include absolute(0 0 116px 0);
 }
 
 // stars
 
 .earth-anim__star {
 	display: block;
-	width: $star-size;
-	height: $star-size;
-	background: $star-color;
+	width: 10px;
+	height: 10px;
+	background: purple;
 	position: absolute;
-
+	transform: rotate(45deg);
+	transition: all .5s ease;
 	.is-active & {
 		background-color: yellow;
 	}
@@ -70,15 +68,28 @@ $earth-color: green;
 
 	// absolute center this thing
 	position: absolute;
-	top: ($earth-size * -0.5);
-	left: ($earth-size * -0.5);
-	margin-top: 50%;
-	margin-left: 50%;
+	// top: ($earth-size * -0.5);
+	// left: ($earth-size * -0.5);
+	// margin-top: 50%;
+	// margin-left: 50%;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -150px;
 
 	// lets add some style
-	background-color: $earth-color;
+	background-image: linear-gradient(#FA9401, #A32F04);
+	border-radius: 50%;
+	box-shadow: -10px -10px rgba(0,0,0,.2) inset;
+	transition: opacity .7s ease, box-shadow 1s ease, transform 1s ease;
+	// transition: all 1s ease;
+	opacity: .05;
+	transform: rotate(30deg) scale(.8);
+
 	.is-active & {
-		background-color: red;
+		box-shadow: -30px -30px rgba(0,0,0,.2) inset;
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
 	}
 }
 

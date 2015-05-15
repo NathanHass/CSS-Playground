@@ -347,22 +347,29 @@ button {
 .page-content {
   overflow: hidden;
   min-height: 100vh;
+  position: relative;
+  background: #222;
 }
 
 .earth-anim {
-  position: relative;
-  max-width: 500px;
-  height: 500px;
-  margin: 100px auto 0;
-  background: #f9f9f9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 116px;
+  left: 0;
 }
 
 .earth-anim__star {
   display: block;
-  width: 15px;
-  height: 15px;
-  background: red;
+  width: 10px;
+  height: 10px;
+  background: purple;
   position: absolute;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
 }
 .is-active .earth-anim__star {
   background-color: yellow;
@@ -388,14 +395,27 @@ button {
   width: 300px;
   height: 300px;
   position: absolute;
-  top: -150px;
-  left: -150px;
-  margin-top: 50%;
-  margin-left: 50%;
-  background-color: green;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+  background-image: -webkit-linear-gradient(#fa9401, #a32f04);
+  background-image: linear-gradient(#fa9401, #a32f04);
+  border-radius: 50%;
+  box-shadow: -10px -10px rgba(0, 0, 0, 0.2) inset;
+  -webkit-transition: opacity .7s ease, box-shadow 1s ease, -webkit-transform 1s ease;
+          transition: opacity .7s ease, box-shadow 1s ease, transform 1s ease;
+  opacity: .05;
+  -webkit-transform: rotate(30deg) scale(0.8);
+      -ms-transform: rotate(30deg) scale(0.8);
+          transform: rotate(30deg) scale(0.8);
 }
 .is-active .earth-anim__earth {
-  background-color: red;
+  box-shadow: -30px -30px rgba(0, 0, 0, 0.2) inset;
+  -webkit-transform: rotate(0deg) scale(1);
+      -ms-transform: rotate(0deg) scale(1);
+          transform: rotate(0deg) scale(1);
+  opacity: 1;
 }
 
 .anim-trigger {
