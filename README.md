@@ -14,6 +14,11 @@ cd ~/Sites
 git clone git@github.com:NathanHass/CSS-Playground.git
 ```
 
+**Navigate into the CSS Playground directory**
+```
+cd CSS-Playground
+```
+
 **Now it's time to build this thing out. First run a bower install**
 ```
 bower install
