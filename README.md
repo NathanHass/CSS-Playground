@@ -1,6 +1,4 @@
-A small starter kit for test environments
-
-## Getting Started Started
+## Getting Started
 
 
 **Navigate to your `Sites` directory**
