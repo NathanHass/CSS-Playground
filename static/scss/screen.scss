@@ -22,10 +22,7 @@ $earth-color: green;
 }
 
 .earth-anim {
-	position: relative;
-	max-width: $box-size;
-	height: $box-size;
-	margin: 100px auto 0;
+	@include absolute(0 0 116px 0);
 }
 
 // stars
@@ -73,10 +70,14 @@ $earth-color: green;
 
 	// absolute center this thing
 	position: absolute;
-	top: ($earth-size * -0.5);
-	left: ($earth-size * -0.5);
-	margin-top: 50%;
-	margin-left: 50%;
+	// top: ($earth-size * -0.5);
+	// left: ($earth-size * -0.5);
+	// margin-top: 50%;
+	// margin-left: 50%;
+	top: 50%;
+	left: 50%;
+	margin-top: ($earth-size * -0.5);
+	margin-left: ($earth-size * -0.5);
 
 	// lets add some style
 	background-color: $earth-color;

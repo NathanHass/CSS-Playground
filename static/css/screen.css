@@ -351,10 +351,11 @@ button {
 }
 
 .earth-anim {
-  position: relative;
-  max-width: 500px;
-  height: 500px;
-  margin: 100px auto 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 116px;
+  left: 0;
 }
 
 .earth-anim__star {
@@ -393,10 +394,10 @@ button {
   width: 300px;
   height: 300px;
   position: absolute;
-  top: -150px;
-  left: -150px;
-  margin-top: 50%;
-  margin-left: 50%;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
   background-color: green;
   border-radius: 50%;
   background-image: -webkit-linear-gradient(60deg, #2c93fa, #fdff9e 90%);
