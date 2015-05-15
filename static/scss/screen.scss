@@ -9,7 +9,7 @@ $box-size: 500px;
 $box-color: #f9f9f9;
 
 $star-size: 15px;
-$star-color: red;
+$star-color: #00223e;
 
 $earth-size: 300px;
 $earth-color: green;
@@ -32,13 +32,16 @@ $earth-color: green;
 
 .earth-anim__star {
 	display: block;
-	width: $star-size;
-	height: $star-size;
+	width: 10px;
+	height: 10px;
 	background: $star-color;
 	position: absolute;
+	transform: rotate(45deg);
+	opacity: 0;
+	transition: all 1s;
 
 	.is-active & {
-		background-color: yellow;
+		opacity: 1;
 	}
 }
 
@@ -76,9 +79,17 @@ $earth-color: green;
 	margin-left: 50%;
 
 	// lets add some style
-	background-color: $earth-color;
+	background-image: linear-gradient(117deg, #ffa17f 17%, #00223e);
+	border-radius: 50%;
+	box-shadow: 5px 5px rgba(0,0,0,.2) inset;
+	transition: opacity 1s ease, box-shadow 1.5s ease, transform 1.5s ease;
+	opacity: 0;
+	transform: rotate(40deg) scale(.9);
+
 	.is-active & {
-		background-color: red;
+		box-shadow: -30px -30px rgba(0,0,0,.2) inset;
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
 	}
 }
 

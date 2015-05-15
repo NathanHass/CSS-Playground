@@ -359,13 +359,19 @@ button {
 
 .earth-anim__star {
   display: block;
-  width: 15px;
-  height: 15px;
-  background: red;
+  width: 10px;
+  height: 10px;
+  background: #00223e;
   position: absolute;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+  -webkit-transition: all 1s;
+          transition: all 1s;
 }
 .is-active .earth-anim__star {
-  background-color: yellow;
+  opacity: 1;
 }
 
 .earth-anim__star--1 {
@@ -392,10 +398,23 @@ button {
   left: -150px;
   margin-top: 50%;
   margin-left: 50%;
-  background-color: green;
+  background-image: -webkit-linear-gradient(333deg, #ffa17f 17%, #00223e);
+  background-image: linear-gradient(117deg, #ffa17f 17%, #00223e);
+  border-radius: 50%;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2) inset;
+  -webkit-transition: opacity 1s ease, box-shadow 1.5s ease, -webkit-transform 1.5s ease;
+          transition: opacity 1s ease, box-shadow 1.5s ease, transform 1.5s ease;
+  opacity: 0;
+  -webkit-transform: rotate(40deg) scale(0.9);
+      -ms-transform: rotate(40deg) scale(0.9);
+          transform: rotate(40deg) scale(0.9);
 }
 .is-active .earth-anim__earth {
-  background-color: red;
+  box-shadow: -30px -30px rgba(0, 0, 0, 0.2) inset;
+  opacity: 1;
+  -webkit-transform: rotate(0deg) scale(1);
+      -ms-transform: rotate(0deg) scale(1);
+          transform: rotate(0deg) scale(1);
 }
 
 .anim-trigger {
