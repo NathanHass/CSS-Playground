@@ -4,5 +4,5 @@
 
 
 $('.anim-trigger').click(function() {
-  $('.earth-anim').toggleClass('is-active');
+  $('.body').toggleClass('is-active');
 })
