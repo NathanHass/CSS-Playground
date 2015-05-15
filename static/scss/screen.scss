@@ -36,9 +36,13 @@ $earth-color: green;
 	height: $star-size;
 	background: $star-color;
 	position: absolute;
+	background-color: rebeccapurple;
+	transform: rotate(35deg);
+	transition: background-color .8s linear;
 
 	.is-active & {
-		background-color: yellow;
+		background-color: red;
+		transition: background-color .8s linear;
 	}
 }
 
@@ -68,17 +72,27 @@ $earth-color: green;
 	width: $earth-size;
 	height: $earth-size;
 
+	border-radius: 50%;
+
 	// absolute center this thing
 	position: absolute;
 	top: ($earth-size * -0.5);
 	left: ($earth-size * -0.5);
 	margin-top: 50%;
 	margin-left: 50%;
+	overflow: hidden;
 
 	// lets add some style
 	background-color: $earth-color;
+	background-image: linear-gradient(-25deg, red 30%, blue);
+	box-shadow: -1x -1px 0 rgba(0, 0, 0, 0.3) inset;
+	transition: opacity .8s ease, box-shadow .3s ease 0.2s, transform 1.5s ease;
+	opacity: 0;
 	.is-active & {
 		background-color: red;
+		opacity: 1;
+		box-shadow: -30px -30px 0 rgba(0, 0, 0, 0.3) inset;
+		transform: rotate(-15deg);
 	}
 }
 
