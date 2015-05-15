@@ -11,7 +11,7 @@ cd ~/Sites
 
 **Clone this directory**
 ```
-git clone git@github.com:NathanHass/ups-sandbox.git
+git clone git@github.com:NathanHass/CSS-Playground.git
 ```
 
 **Now it's time to build this thing out. First run a bower install**
