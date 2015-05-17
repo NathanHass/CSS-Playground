@@ -91,9 +91,9 @@ html {
 	border-radius: 50%;
 	transition: all 1s ease;
 
-	opacity: .05;
+	// opacity: .05;
 	transform-origin: center center;
-	transform: rotate(0deg) scale(.6);
+	transform: rotate(0deg) scale(.8);
 
 	.is-active & {
 		transform: rotate(-5deg) scale(1);
@@ -103,7 +103,7 @@ html {
 
 
 @each $planet in $planets {
-	$relative-planet-size: $relative-base-planet-size * nth($planet, 2);
+	$relative-planet-size: ceil($relative-base-planet-size * nth($planet, 2));
 	$relative-planet-box-shadow: $relative-planet-size / -10;
 	$relative-planet-offset: $relative-planet-size * -0.5;
 

@@ -14,6 +14,10 @@ window.onload = function () {
     // Optional parameters
     loop: true,
     keyboardControl: true,
-    slideActiveClass: 'is-active'
+    slideActiveClass: 'is-active',
+    pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    paginationClickable: true
   })
 };
