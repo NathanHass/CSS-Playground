@@ -10,16 +10,18 @@ $star-size: 15px;
 $base-planet-size: ceil(100vh / 2);
 $relative-base-planet-size: ceil(100vh / 15);
 
-$planet-list:
-	mercury		0.38		linear-gradient(30deg,#2c93fa,#fdff9e 90%),
-	venus			0.95		linear-gradient(#E59F30,#912020),
-	earth			1				linear-gradient(110deg, #34b8e8 10%, #abcf55 90%),
-	mars			0.53		linear-gradient(#FA9401, #A32F04),
-	jupiter		11.19		linear-gradient(#B47643,#C52505),
-	saturn		9.4			linear-gradient(#D8A650,#A48361),
-	uranus		4.04		radial-gradient(40% 45%, farthest-side, #CBD9E4,#6799CA),
-	neptune 	3.88		linear-gradient(#436BFE, #2C368C),
-	pluto			0.18		linear-gradient(#BEBEB9,#7B5A38);
+
+//				planet		size		gradient
+$planets:	mercury		0.38		linear-gradient(30deg,#2c93fa,#fdff9e 90%),
+					venus			0.95		linear-gradient(#E59F30,#912020),
+					earth			1				linear-gradient(110deg, #34b8e8 10%, #abcf55 90%),
+					mars			0.53		linear-gradient(#FA9401, #A32F04),
+					jupiter		11.19		linear-gradient(#B47643,#C52505),
+					saturn		9.4			linear-gradient(#D8A650,#A48361),
+					uranus		4.04		radial-gradient(40% 45%, farthest-side, #CBD9E4,#6799CA),
+					neptune 	3.88		linear-gradient(#436BFE, #2C368C),
+					pluto			0.18		linear-gradient(#BEBEB9,#7B5A38);
+
 
 html {
 	background: #222;
@@ -100,7 +102,7 @@ html {
 }
 
 
-@each $planet in $planet-list {
+@each $planet in $planets {
 	$relative-planet-size: $relative-base-planet-size * nth($planet, 2);
 	$relative-planet-box-shadow: $relative-planet-size / -10;
 	$relative-planet-offset: $relative-planet-size * -0.5;
