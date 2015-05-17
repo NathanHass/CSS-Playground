@@ -406,9 +406,12 @@ button {
   -webkit-transition: opacity .7s ease, box-shadow 1s ease, -webkit-transform 1s ease;
           transition: opacity .7s ease, box-shadow 1s ease, transform 1s ease;
   opacity: .05;
-  -webkit-transform: rotate(30deg) scale(0.8);
-      -ms-transform: rotate(30deg) scale(0.8);
-          transform: rotate(30deg) scale(0.8);
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: rotate(30deg) scale(0.6) translateY(500px);
+      -ms-transform: rotate(30deg) scale(0.6) translateY(500px);
+          transform: rotate(30deg) scale(0.6) translateY(500px);
 }
 .is-active .earth-anim__earth {
   box-shadow: -30px -30px rgba(0, 0, 0, 0.2) inset;

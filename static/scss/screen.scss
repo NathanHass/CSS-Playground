@@ -84,7 +84,8 @@ $earth-color: green;
 	transition: opacity .7s ease, box-shadow 1s ease, transform 1s ease;
 	// transition: all 1s ease;
 	opacity: .05;
-	transform: rotate(30deg) scale(.8);
+	transform-origin: center center;
+	transform: rotate(30deg) scale(.6) translateY(500px);
 
 	.is-active & {
 		box-shadow: -30px -30px rgba(0,0,0,.2) inset;
