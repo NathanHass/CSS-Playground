@@ -1,445 +1,63 @@
-* {
-  box-sizing: border-box;
-}
+/*
+Error: Invalid CSS after "...inear-gradient(": expected ")", was ",);"
+        on line 23 of /Users/nathanhass/Sites/CSS-Playground/static/scss/screen.scss
 
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
+18: $uranus-ratio: 4.04;
+19: $neptune-ratio: 3.88;
+20: $pluto-ratio: .18;
+21: 
+22: // planet colors
+23: $mercury-color: linear-gradient(,);
+24: $venus-color: linear-gradient(,);
+25: $earth-color: linear-gradient(,);
+26: $mars-color: linear-gradient(#FA9401, #A32F04);
+27: $jupiter-color: linear-gradient(,);
+28: $saturn-color: linear-gradient(,);
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-img {
-  line-height: 0;
-  vertical-align: middle;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
-body {
-  font: 13px/1.231 sans-serif;
-  *font-size: small;
-  /*text-rendering: optimizeLegibility;*/
-  /* this causes problems in Chrome for Windows and on iOS */
-  -webkit-overflow-scrolling: touch;
-}
-
-select, input, textarea, button {
-  font: 99% sans-serif;
-}
-
-pre, code, kbd, samp {
-  font-family: monospace, sans-serif;
-}
-
-body, select, input, textarea {
-  color: #444;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-}
-
-html {
-  overflow-y: scroll;
-}
-
-a:hover, a:active {
-  outline: none;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-nav ul, nav li {
-  margin: 0;
-}
-
-small {
-  font-size: 85%;
-}
-
-strong, th {
-  font-weight: bold;
-}
-
-td, td img {
-  vertical-align: top;
-}
-
-sub {
-  vertical-align: sub;
-  font-size: smaller;
-}
-
-sup {
-  vertical-align: super;
-  font-size: smaller;
-}
-
-pre {
-  padding: 15px;
+Backtrace:
+/Users/nathanhass/Sites/CSS-Playground/static/scss/screen.scss:23
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/lexer.rb:221:in `expected!'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:580:in `assert_tok'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:408:in `funcall'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:387:in `ident'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:246:in `unary_not'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:246:in `unary_div'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:246:in `unary_minus'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:246:in `unary_plus'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:227:in `times_div_or_mod'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:227:in `plus_or_minus'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:227:in `relational'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:227:in `eq_or_neq'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:227:in `and_expr'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:227:in `or_expr'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:361:in `space'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:345:in `interpolation'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:293:in `expr'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:571:in `assert_expr'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/script/parser.rb:62:in `parse'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:1027:in `sass_script'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:607:in `variable'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:660:in `block_child'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/scss/parser.rb:42:in `parse'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/engine.rb:393:in `_to_tree'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/listen-2.8.5/lib/listen/listener.rb:282:in `call'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/listen-2.8.5/lib/listen/listener.rb:282:in `_process_changes'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/listen-2.8.5/lib/listen/listener.rb:246:in `block in _wait_for_changes'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/listen-2.8.5/lib/listen/listener.rb:229:in `loop'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/listen-2.8.5/lib/listen/listener.rb:229:in `_wait_for_changes'
+/Users/nathanhass/.rvm/gems/ruby-2.1.2/gems/listen-2.8.5/lib/listen/listener.rb:318:in `block in _start_wait_thread'
+*/
+body:before {
   white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  word-wrap: break-word;
-}
-
-textarea {
-  overflow: auto;
-}
-
-.ie6 legend, .ie7 legend {
-  margin-left: -7px;
-}
-
-input[type="radio"] {
-  vertical-align: text-bottom;
-}
-
-input[type="checkbox"] {
-  vertical-align: bottom;
-}
-
-.ie7 input[type="checkbox"] {
-  vertical-align: baseline;
-}
-
-.ie6 input {
-  vertical-align: text-bottom;
-}
-
-label, input[type=button], input[type=submit], button {
-  cursor: pointer;
-}
-
-button, input, select, textarea {
-  margin: 0;
-}
-
-input:invalid, textarea:invalid {
-  border-radius: 1px;
-  box-shadow: 0px 0px 5px red;
-}
-
-.no-boxshadow input:invalid,
-.no-boxshadow textarea:invalid {
-  background-color: #f0dddd;
-}
-
-::-moz-selection {
-  background: #1d78af;
-  color: #FFF;
-  text-shadow: none;
-}
-
-::selection {
-  background: #1d78af;
-  color: #FFF;
-  text-shadow: none;
-}
-
-a:link {
-  -webkit-tap-highlight-color: #1d78af;
-}
-
-button {
-  width: auto;
-  overflow: visible;
-}
-
-.ie7 img {
-  -ms-interpolation-mode: bicubic;
-}
-
-.clearfix:before, .clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-.a11y-only {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-.ui-block:last-child,
-.ui-block.last {
-  margin-right: 0;
-}
-
-@-webkit-keyframes anim-test {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes anim-test {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.ex-anim {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.ex-anim__column {
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-.ex-anim__column--1 {
-  left: 0;
-}
-
-.ex-anim__column--2 {
-  right: 0;
-}
-
-.ex-anim__title {
-  font-family: "proxima-nova";
-  text-align: center;
-  padding: 20px;
-  font-size: 30px;
-}
-
-.ex-anim__node {
-  display: block;
-  width: 300px;
-  height: 50px;
-  background-color: black;
-  -webkit-transition: all 20s ease;
-          transition: all 20s ease;
-}
-
-.ex-anim__node--transform {
-  margin: 0 auto;
-}
-.is-active .ex-anim__node--transform {
-  -webkit-transform: translateY(500px);
-      -ms-transform: translateY(500px);
-          transform: translateY(500px);
-}
-
-.ex-anim__node--top {
-  position: absolute;
-  left: 50%;
-  top: 76px;
-  margin-left: -150px;
-}
-.is-active .ex-anim__node--top {
-  top: 576px;
-}
-
-.page-content {
-  overflow: hidden;
-  min-height: 100vh;
-  position: relative;
-  background: #222;
-}
-
-.earth-anim {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 116px;
-  left: 0;
-}
-
-.earth-anim__star {
-  display: block;
-  width: 10px;
-  height: 10px;
-  background: purple;
-  position: absolute;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: all .5s ease;
-          transition: all .5s ease;
-}
-.is-active .earth-anim__star {
-  background-color: yellow;
-}
-
-.earth-anim__star--1 {
-  top: 30px;
-  left: 50px;
-}
-
-.earth-anim__star--2 {
-  bottom: 200px;
-  right: 30px;
-}
-
-.earth-anim__star--3 {
-  bottom: 30px;
-  left: 140px;
-}
-
-.earth-anim__earth {
-  display: block;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -150px;
-  margin-left: -150px;
-  background-image: -webkit-linear-gradient(#fa9401, #a32f04);
-  background-image: linear-gradient(#fa9401, #a32f04);
-  border-radius: 50%;
-  box-shadow: -10px -10px rgba(0, 0, 0, 0.2) inset;
-  -webkit-transition: opacity .7s ease, box-shadow 1s ease, -webkit-transform 1s ease;
-          transition: opacity .7s ease, box-shadow 1s ease, transform 1s ease;
-  opacity: .05;
-  -webkit-transform-origin: center center;
-      -ms-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-transform: rotate(30deg) scale(0.6) translateY(500px);
-      -ms-transform: rotate(30deg) scale(0.6) translateY(500px);
-          transform: rotate(30deg) scale(0.6) translateY(500px);
-}
-.is-active .earth-anim__earth {
-  box-shadow: -30px -30px rgba(0, 0, 0, 0.2) inset;
-  -webkit-transform: rotate(0deg) scale(1);
-      -ms-transform: rotate(0deg) scale(1);
-          transform: rotate(0deg) scale(1);
-  opacity: 1;
-}
-
-.anim-trigger {
-  border: 0;
-  background-color: transparent;
-  box-shadow: none;
-  border-radius: 0;
-  -webkit-appearance: none;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-family: "proxima-nova";
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 50px 0;
-  text-align: center;
-  background: #eee;
-}
-.anim-trigger:focus {
-  outline: 0;
-}
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...inear-gradient(\": expected \")\", was \",);\"\A         on line 23 of /Users/nathanhass/Sites/CSS-Playground/static/scss/screen.scss\A \A 18: $uranus-ratio: 4.04;\A 19: $neptune-ratio: 3.88;\A 20: $pluto-ratio: .18;\A 21: \A 22: // planet colors\A 23: $mercury-color: linear-gradient(,);\A 24: $venus-color: linear-gradient(,);\A 25: $earth-color: linear-gradient(,);\A 26: $mars-color: linear-gradient(#FA9401, #A32F04);\A 27: $jupiter-color: linear-gradient(,);\A 28: $saturn-color: linear-gradient(,);"; }

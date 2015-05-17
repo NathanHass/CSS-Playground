@@ -5,14 +5,32 @@
 @import "partials/anim-example";
 
 
-$box-size: 500px;
-$box-color: #f9f9f9;
-
 $star-size: 15px;
-$star-color: red;
+$planet-size: 300px;
 
-$earth-size: 300px;
-$earth-color: green;
+// planet ratios
+$mercury-ratio: .38;
+$venus-ratio: .95;
+$earth-ratio: 1;
+$mars-ratio: .53;
+$jupiter-ratio: 11.19;
+$saturn-ratio: 9.4;
+$uranus-ratio: 4.04;
+$neptune-ratio: 3.88;
+$pluto-ratio: .18;
+
+// planet colors
+$mercury-color: linear-gradient(,);
+$venus-color: linear-gradient(,);
+$earth-color: linear-gradient(,);
+$mars-color: linear-gradient(#FA9401, #A32F04);
+$jupiter-color: linear-gradient(,);
+$saturn-color: linear-gradient(,);
+$uranus-color: linear-gradient(,);
+$neptune-color: linear-gradient(,);
+$pluto-color: linear-gradient(,);
+
+
 
 .page-content {
 	overflow: hidden;
@@ -21,13 +39,13 @@ $earth-color: green;
 	background: #222;
 }
 
-.earth-anim {
+.planet-anim {
 	@include absolute(0 0 116px 0);
 }
 
 // stars
 
-.earth-anim__star {
+.planet-anim__star {
 	display: block;
 	width: 10px;
 	height: 10px;
@@ -40,36 +58,36 @@ $earth-color: green;
 	}
 }
 
-.earth-anim__star--1 {
+.planet-anim__star--1 {
 	// position star here
 	top: 30px;
 	left: 50px;
 }
 
-.earth-anim__star--2 {
+.planet-anim__star--2 {
 	// position star here
 	bottom: 200px;
 	right: 30px;
 }
 
-.earth-anim__star--3 {
+.planet-anim__star--3 {
 	// position star here
 	bottom: 30px;
 	left: 140px;
 }
 
-// earth
+// planet
 
-.earth-anim__earth {
+.planet-anim__earth {
 	display: block;
 	// declare the size
-	width: $earth-size;
-	height: $earth-size;
+	width: $planet-size;
+	height: $planet-size;
 
 	// absolute center this thing
 	position: absolute;
-	// top: ($earth-size * -0.5);
-	// left: ($earth-size * -0.5);
+	// top: ($planet-size * -0.5);
+	// left: ($planet-size * -0.5);
 	// margin-top: 50%;
 	// margin-left: 50%;
 	top: 50%;
