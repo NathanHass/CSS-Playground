@@ -8,3 +8,13 @@ $('.anim-trigger').click(function() {
   $('.body').toggleClass('is-active');
   $(this).text(toggleText)
 })
+
+window.onload = function () {
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    loop: true,
+    keyboardControl: true,
+    slideActiveClass: 'is-active'
+  })
+};
