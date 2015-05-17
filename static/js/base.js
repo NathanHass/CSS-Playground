@@ -2,10 +2,9 @@
  * Do your jorvascrompts here!
  */
 
-
-$('.anim-trigger').click(function() {
-  var toggleText = $('.body').hasClass('is-active') ? 'Add Active Class' : 'Remove Active Class';
-  $('.body').toggleClass('is-active');
+$('.trigger-relative').click(function() {
+  var toggleText = $('.body').hasClass('is-relative') ? 'Show Relative Sizes' : 'Hide Relative Sizes';
+  $('.body').toggleClass('is-relative');
   $(this).text(toggleText)
 })
 

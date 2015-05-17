@@ -7,7 +7,8 @@
 
 
 $star-size: 15px;
-$base-planet-size: ceil(100vh / 12);
+$base-planet-size: ceil(100vh / 2);
+$relative-base-planet-size: ceil(100vh / 15);
 
 $planet-list:
 	mercury		0.38		linear-gradient(30deg,#2c93fa,#fdff9e 90%),
@@ -81,7 +82,7 @@ html {
 
 	// lets add some style
 	border-radius: 50%;
-	transition: opacity .7s ease, box-shadow 1s ease, transform 1s ease;
+	transition: all 1s ease;
 
 	opacity: .05;
 	transform-origin: center center;
@@ -95,15 +96,21 @@ html {
 
 
 @each $planet in $planet-list {
-	$planet-size: $base-planet-size * nth($planet, 2);
-	$planet-box-shadow: $planet-size / -10;
-	$planet-offset: $planet-size * -0.5;
+	$relative-planet-size: $relative-base-planet-size * nth($planet, 2);
+	$relative-planet-box-shadow: $relative-planet-size / -10;
+	$relative-planet-offset: $relative-planet-size * -0.5;
 	.planet-anim__#{nth($planet, 1)} {
-		@include size($planet-size);
-		margin-top: calc(#{$planet-offset} - 50px);
-		margin-left: $planet-offset;
 		background: nth($planet, 3);
-		box-shadow: $planet-box-shadow $planet-box-shadow rgba(0,0,0,.2) inset;
+		@include size($base-planet-size);
+		margin-top: calc(#{$base-planet-size * -0.5} - 50px);
+		margin-left: $base-planet-size * -0.5;
+		box-shadow: ($base-planet-size / -10) ($base-planet-size / -10) rgba(0,0,0,.2) inset;
+		.is-relative & {
+			@include size($relative-planet-size);
+			margin-top: calc(#{$relative-planet-offset} - 50px);
+			margin-left: $relative-planet-offset;
+			box-shadow: $relative-planet-box-shadow $relative-planet-box-shadow rgba(0,0,0,.2) inset;
+		}
 	}
 }
 
@@ -142,4 +149,19 @@ html {
 	text-align: center;
 	background: #eee;
 
+}
+
+.trigger-relative {
+	@include input-default;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 999;
+
+	font-family: "proxima-nova";
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 20px 20px;
 }
