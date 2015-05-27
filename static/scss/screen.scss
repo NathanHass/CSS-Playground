@@ -63,6 +63,32 @@ $earth-color: green;
 	left: 140px;
 }
 
+//moon
+
+.earth-anim__moon {
+	display: block;
+
+	width: 75px;
+	height: 75px;
+
+	position: absolute;
+	top: 50px;
+	right: 40px;
+
+	background-image: linear-gradient(117deg, #3d72b4 30%, #00223e);
+	border-radius: 50%;
+	box-shadow: 5px 5px rgba(0,0,0,.2) inset;
+	opacity: 0;
+	transition: all 1.5s;
+
+	.is-active & {
+		box-shadow: -5px -5px rgba(0,0,0,.2) inset;
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
+	}
+
+}
+
 // earth
 
 .earth-anim__earth {
@@ -79,7 +105,7 @@ $earth-color: green;
 	margin-left: 50%;
 
 	// lets add some style
-	background-image: linear-gradient(117deg, #ffa17f 17%, #00223e);
+	background-image: linear-gradient(117deg, #ffa17f 13%, #00223e);
 	border-radius: 50%;
 	box-shadow: 5px 5px rgba(0,0,0,.2) inset;
 	transition: opacity 1s ease, box-shadow 1.5s ease, transform 1.5s ease;
@@ -87,7 +113,7 @@ $earth-color: green;
 	transform: rotate(40deg) scale(.9);
 
 	.is-active & {
-		box-shadow: -30px -30px rgba(0,0,0,.2) inset;
+		box-shadow: -25px -25px rgba(0,0,0,.2) inset;
 		opacity: 1;
 		transform: rotate(0deg) scale(1);
 	}
