@@ -344,6 +344,11 @@ button {
   top: 576px;
 }
 
+.body {
+  background-image: -webkit-linear-gradient(313deg, #53346d -4%, #000000);
+  background-image: linear-gradient(137deg, #53346d -4%, #000000);
+}
+
 .page-content {
   overflow: hidden;
   min-height: 100vh;
@@ -361,7 +366,7 @@ button {
   display: block;
   width: 10px;
   height: 10px;
-  background: #00223e;
+  background: #eee;
   position: absolute;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -389,6 +394,27 @@ button {
   left: 140px;
 }
 
+@-webkit-keyframes moon-anim {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1) translate3d(300px, 0, 0);
+            transform: rotate(0deg) scale(1) translate3d(300px, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1) translate3d(300px, 0, 0);
+            transform: rotate(360deg) scale(1) translate3d(300px, 0, 0);
+  }
+}
+
+@keyframes moon-anim {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1) translate3d(300px, 0, 0);
+            transform: rotate(0deg) scale(1) translate3d(300px, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1) translate3d(300px, 0, 0);
+            transform: rotate(360deg) scale(1) translate3d(300px, 0, 0);
+  }
+}
 .earth-anim__moon {
   display: block;
   width: 75px;
@@ -404,18 +430,24 @@ button {
   border-radius: 50%;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2) inset;
   opacity: 0;
-  -webkit-transform: rotate(40deg) scale(0.9);
-      -ms-transform: rotate(40deg) scale(0.9);
-          transform: rotate(40deg) scale(0.9);
+  -webkit-transform: scale(0.9) translate3d(50px, 0, 0) rotate(40deg);
+          transform: scale(0.9) translate3d(50px, 0, 0) rotate(40deg);
   -webkit-transition: all 1.25s;
           transition: all 1.25s;
 }
 .is-active .earth-anim__moon {
   box-shadow: -5px -5px rgba(0, 0, 0, 0.2) inset;
   opacity: 1;
-  -webkit-transform: rotate(0deg) scale(1);
-      -ms-transform: rotate(0deg) scale(1);
-          transform: rotate(0deg) scale(1);
+  -webkit-transform: rotate(0deg) scale(1) translate3d(200px, 0, 0);
+          transform: rotate(0deg) scale(1) translate3d(200px, 0, 0);
+  -webkit-animation: moon-anim 3.5s;
+          animation: moon-anim 3.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .earth-anim__earth {
