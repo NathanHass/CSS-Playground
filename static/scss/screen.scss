@@ -9,10 +9,13 @@ $box-size: 500px;
 $box-color: #f9f9f9;
 
 $star-size: 10px;
-$star-color: purple;
+$star-color: #fbefa7;
 
 $earth-size: 300px;
 $earth-color: green;
+
+$moon-size: 50px;
+$moon-color: #fff;
 
 .page-content {
 	overflow: hidden;
@@ -32,13 +35,14 @@ $earth-color: green;
 	width: $star-size;
 	height: $star-size;
 	background: $star-color;
+	opacity: 0;
 	position: absolute;
 	// rotate!
 	transform: rotate(45deg);
 	transition: all .5s ease;
 
 	.is-active & {
-		background-color: yellow;
+		opacity: 100;
 	}
 }
 
@@ -46,18 +50,31 @@ $earth-color: green;
 	// position star here
 	top: 30px;
 	left: 50px;
+
+	.is-active & {
+		top: 170px;
+		left: 260px;
+	}
 }
 
 .earth-anim__star--2 {
 	// position star here
 	bottom: 200px;
 	right: 30px;
+	.is-active & {
+		bottom: 300px;
+		right: 300px;
+	}
 }
 
 .earth-anim__star--3 {
 	// position star here
 	bottom: 30px;
 	left: 140px;
+	.is-active & {
+		bottom: 180px;
+		left: 380px;
+	}
 }
 
 // earth
@@ -98,6 +115,41 @@ $earth-color: green;
 	}
 }
 
+.earth-anim__moon {
+	display: block;
+	// declare the size
+	width: $moon-size;
+	height: $moon-size;
+
+	// absolute center this thing
+	position: absolute;
+	// top: ($earth-size * -0.5);
+	// left: ($earth-size * -0.5);
+	// margin-top: 50%;
+	// margin-left: 50%;
+	top: 45%;
+	left: 30%;
+	margin-top: ($moon-size * -0.5);
+	margin-left: ($moon-size * -0.5);
+
+	// lets add some style
+	background-color: $moon-color;
+
+	// make it a circle
+	border-radius: 50%;
+	background-image: linear-gradient(-30deg,#989798, #efe9eb 90%);
+	box-shadow: inset 0 0 0 rgba(89,98,167,0);
+	transition: opacity 1s ease, box-shadow .5s ease .3s, transform 1s ease;
+	opacity: 0;
+	transform: rotate(60deg) scale(.9);
+
+	.is-active & {
+		background-color: red;
+		opacity: 1;
+		box-shadow: inset -5px -10px 0 rgba(89,98,167,0.2);
+		transform: rotate(0) scale(1);
+	}
+}
 
 .anim-trigger {
 	@include input-default;
