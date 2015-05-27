@@ -72,14 +72,18 @@ $earth-color: green;
 	height: 75px;
 
 	position: absolute;
-	top: 50px;
-	right: 40px;
+	top: 50%;
+	left: 50%;
+	margin-top: (75px * -0.5);
+	margin-left: (75px * -0.5);
+	z-index: 100;
 
 	background-image: linear-gradient(117deg, #3d72b4 30%, #00223e);
 	border-radius: 50%;
 	box-shadow: 5px 5px rgba(0,0,0,.2) inset;
 	opacity: 0;
-	transition: all 1.5s;
+	transform: rotate(40deg) scale(.9);
+	transition: all 1.25s;
 
 	.is-active & {
 		box-shadow: -5px -5px rgba(0,0,0,.2) inset;
@@ -99,10 +103,10 @@ $earth-color: green;
 
 	// absolute center this thing
 	position: absolute;
-	top: ($earth-size * -0.5);
-	left: ($earth-size * -0.5);
-	margin-top: 50%;
-	margin-left: 50%;
+	top: 50%;
+	left: 50%;
+	margin-top: ($earth-size * -0.5);
+	margin-left: ($earth-size * -0.5);
 
 	// lets add some style
 	background-image: linear-gradient(117deg, #ffa17f 13%, #00223e);
