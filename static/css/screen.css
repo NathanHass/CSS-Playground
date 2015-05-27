@@ -421,6 +421,27 @@ button {
   opacity: 1;
 }
 
+@-webkit-keyframes moon-anim {
+  0% {
+    -webkit-transform: rotate(0deg) translate3D(240px, 0, 0);
+            transform: rotate(0deg) translate3D(240px, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate3D(240px, 0, 0);
+            transform: rotate(360deg) translate3D(240px, 0, 0);
+  }
+}
+
+@keyframes moon-anim {
+  0% {
+    -webkit-transform: rotate(0deg) translate3D(240px, 0, 0);
+            transform: rotate(0deg) translate3D(240px, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate3D(240px, 0, 0);
+            transform: rotate(360deg) translate3D(240px, 0, 0);
+  }
+}
 .earth-anim__moon {
   display: block;
   width: 100px;
@@ -434,16 +455,17 @@ button {
   background-image: radial-gradient(#ffffff, #f2f2f2);
   border-radius: 50%;
   box-shadow: -15px -15px rgba(0, 0, 0, 0.2) inset;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
-  opacity: 0;
+  opacity: 0.1;
   -webkit-transform-origin: center center;
       -ms-transform-origin: center center;
           transform-origin: center center;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-animation: moon-anim 5s infinite linear;
+          animation: moon-anim 5s infinite linear;
 }
 .is-active .earth-anim__moon {
+  -webkit-transform: rotate(0deg) scale(1) translate3D(240px, 0, 0);
+      -ms-transform: rotate(0deg) scale(1) translate3D(240px, 0, 0);
+          transform: rotate(0deg) scale(1) translate3D(240px, 0, 0);
   opacity: 1;
 }
 

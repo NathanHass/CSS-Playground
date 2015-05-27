@@ -90,6 +90,15 @@ $earth-color: green;
 	}
 }
 
+@keyframes moon-anim {
+	0% {
+		transform: rotate(0deg) translate3D(240px, 0, 0);
+	}
+	100% {
+		transform: rotate(360deg) translate3D(240px, 0, 0);
+	}
+}
+
 .earth-anim__moon {
 	display: block;
 	// declare the size
@@ -107,14 +116,13 @@ $earth-color: green;
 	background-image: radial-gradient(#ffffff, #f2f2f2);
 	border-radius: 50%;
 	box-shadow: -15px -15px rgba(0,0,0,.2) inset;
-	transition: all 1s ease;
-	// transition: all 1s ease;
-	opacity: 0;
+
+	opacity: 0.1;
 	transform-origin: center center;
-	transition-delay: 1s;
+	animation: moon-anim 5s infinite linear;
 
 	.is-active & {
-		// transform: rotate(0deg) scale(1);
+		transform: rotate(0deg) scale(1) translate3D(240px, 0, 0);
 		opacity: 1;
 	}
 }
