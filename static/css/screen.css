@@ -421,6 +421,32 @@ button {
   opacity: 1;
 }
 
+.earth-anim__moon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  background-image: -webkit-radial-gradient(#ffffff, #f2f2f2);
+  background-image: radial-gradient(#ffffff, #f2f2f2);
+  border-radius: 50%;
+  box-shadow: -15px -15px rgba(0, 0, 0, 0.2) inset;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  opacity: 0;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+.is-active .earth-anim__moon {
+  opacity: 1;
+}
+
 .anim-trigger {
   border: 0;
   background-color: transparent;
