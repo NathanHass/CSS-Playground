@@ -432,13 +432,34 @@ button {
           transform: rotate(0) scale(1);
 }
 
+@-webkit-keyframes moon-anim {
+  0% {
+    -webkit-transform: rotate(0) translate3d(250px, 0, 0) scale(1);
+            transform: rotate(0) translate3d(250px, 0, 0) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate3d(250px, 0, 0) scale(1);
+            transform: rotate(360deg) translate3d(250px, 0, 0) scale(1);
+  }
+}
+
+@keyframes moon-anim {
+  0% {
+    -webkit-transform: rotate(0) translate3d(250px, 0, 0) scale(1);
+            transform: rotate(0) translate3d(250px, 0, 0) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translate3d(250px, 0, 0) scale(1);
+            transform: rotate(360deg) translate3d(250px, 0, 0) scale(1);
+  }
+}
 .earth-anim__moon {
   display: block;
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 45%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
   margin-top: -25px;
   margin-left: -25px;
   background-color: #fff;
@@ -449,17 +470,17 @@ button {
   -webkit-transition: opacity 1s ease, box-shadow .5s ease .3s, -webkit-transform 1s ease;
           transition: opacity 1s ease, box-shadow .5s ease .3s, transform 1s ease;
   opacity: 0;
-  -webkit-transform: rotate(60deg) scale(0.9);
-      -ms-transform: rotate(60deg) scale(0.9);
-          transform: rotate(60deg) scale(0.9);
+  -webkit-animation: moon-anim 7s infinite;
+          animation: moon-anim 7s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 .is-active .earth-anim__moon {
   background-color: red;
   opacity: 1;
   box-shadow: inset -5px -10px 0 rgba(89, 98, 167, 0.2);
-  -webkit-transform: rotate(0) scale(1);
-      -ms-transform: rotate(0) scale(1);
-          transform: rotate(0) scale(1);
 }
 
 .anim-trigger {
