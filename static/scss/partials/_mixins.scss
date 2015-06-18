@@ -15,3 +15,27 @@
     }
   }
 }
+
+// 1. mixin should define the button color.
+// 2. mixin should define the button size.
+// 3. button should have hover state
+
+@mixin button($padding, $font-size) {
+	background-color: #c3e9f3;
+	color: #687caf;
+	margin:20px;
+	border: .3em solid #687caf;
+	border-radius: 3.5em;
+	padding: $padding;
+	font-size: $font-size;
+	font-family: "Arial";
+	font-weight: bold;
+	
+	&:hover {
+		cursor: pointer;
+		background-color: mix(white, #c3e9f3, 15%);
+		border-color: mix(white, #687caf, 40%);
+		color: mix(white, #687caf, 40%);
+	}
+}
+

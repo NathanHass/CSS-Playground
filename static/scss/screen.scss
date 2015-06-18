@@ -185,3 +185,15 @@ $moon-color: #fff;
 	background: #eee;
 
 }
+
+.button--small {
+	@include button(1em, 16px);
+}
+
+.button--medium {
+	@include button(1.5em, 24px);
+}
+
+.button--large {
+	@include button(2em, 36px);
+}

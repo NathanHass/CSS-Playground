@@ -505,3 +505,57 @@ button {
 .anim-trigger:focus {
   outline: 0;
 }
+
+.button--small {
+  background-color: #c3e9f3;
+  color: #687caf;
+  margin: 20px;
+  border: .3em solid #687caf;
+  border-radius: 3.5em;
+  padding: 1em;
+  font-size: 16px;
+  font-family: "Arial";
+  font-weight: bold;
+}
+.button--small:hover {
+  cursor: pointer;
+  background-color: #ccecf4;
+  border-color: #a4b0cf;
+  color: #a4b0cf;
+}
+
+.button--medium {
+  background-color: #c3e9f3;
+  color: #687caf;
+  margin: 20px;
+  border: .3em solid #687caf;
+  border-radius: 3.5em;
+  padding: 1.5em;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: bold;
+}
+.button--medium:hover {
+  cursor: pointer;
+  background-color: #ccecf4;
+  border-color: #a4b0cf;
+  color: #a4b0cf;
+}
+
+.button--large {
+  background-color: #c3e9f3;
+  color: #687caf;
+  margin: 20px;
+  border: .3em solid #687caf;
+  border-radius: 3.5em;
+  padding: 2em;
+  font-size: 36px;
+  font-family: "Arial";
+  font-weight: bold;
+}
+.button--large:hover {
+  cursor: pointer;
+  background-color: #ccecf4;
+  border-color: #a4b0cf;
+  color: #a4b0cf;
+}
